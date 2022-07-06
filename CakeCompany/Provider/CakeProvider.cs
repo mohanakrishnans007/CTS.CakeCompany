@@ -2,6 +2,9 @@
 
 namespace CakeCompany.Provider;
 
+/// <summary>
+/// CakeProvider class to check the type of cake required and all cake details
+/// </summary>
 internal class CakeProvider
 {
     public DateTime Check(Order order)
