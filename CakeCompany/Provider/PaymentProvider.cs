@@ -2,9 +2,12 @@
 
 namespace CakeCompany.Provider;
 
+/// <summary>
+/// PaymentProvider - Process payment to check for the client validity
+/// </summary>
 internal class PaymentProvider
 {
-    public PaymentIn Process(Order order)
+    public static PaymentIn Process(Order order)
     {
         if (order.ClientName.Contains("Important"))
         {

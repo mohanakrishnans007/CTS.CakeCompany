@@ -1,11 +1,14 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿
 using CakeCompany.Models;
 
 namespace CakeCompany.Provider;
 
+/// <summary>
+/// OrderProvider - Gets all the needed order data loaded
+/// </summary>
 internal class OrderProvider
 {
-    public Order[] GetLatestOrders()
+    public static Order[] GetLatestOrders()
     {
         return new Order[]
         {
@@ -14,9 +17,6 @@ internal class OrderProvider
         };
     }
 
-    public void UpdateOrders(Order[] orders)
-    {
-    }
 }
 
 

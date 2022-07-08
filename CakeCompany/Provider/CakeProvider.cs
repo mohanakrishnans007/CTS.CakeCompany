@@ -1,13 +1,14 @@
-﻿using CakeCompany.Models;
+﻿using CakeCompany.Interfaces;
+using CakeCompany.Models;
 
 namespace CakeCompany.Provider;
 
 /// <summary>
 /// CakeProvider class to check the type of cake required and all cake details
 /// </summary>
-internal class CakeProvider
+public class CakeProvider: ICakeProviderInterface
 {
-    public DateTime Check(Order order)
+    public  DateTime Check(Order order)
     {
         if (order.Name == Cake.Chocolate)
         {
@@ -22,7 +23,7 @@ internal class CakeProvider
         return DateTime.Now.Add(TimeSpan.FromHours(15));
     }
 
-    public Product Bake(Order order)
+    public  Product Bake(Order order)
     {
         if (order.Name == Cake.Chocolate)
         {
